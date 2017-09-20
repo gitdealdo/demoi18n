@@ -1,0 +1,8 @@
+./manage.py makemessages --keep-pot --locale "es"
+./manage.py makemessages --domain djangojs --keep-pot --locale "es"
+# OR django-admin makemessages
+# then
+./manage.py compilemessages
+./manage.py runserver
+  
+

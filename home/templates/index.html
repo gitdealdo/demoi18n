@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE%}		
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% trans "i18n Demo" %} context "page title"</title>
+	<script src="{% url 'javascript-catalog' %}" type="text/javascript"></script>
+	<script src="/static/index.js" type="text/javascript"></script>
+</head>
+<body>
+	<div align="center">
+		Hello {{greting}}
+		<p>Current language {{LANGUAGE_CODE | language_name}}</p>
+		<h2>{{description}}</h2>
+		<p>{% trans "Let's see how django i18n works!! (str from template)" %}</p>
+		<button type="button" onclick="fetchString();">{% trans "Show string from JS as well." %}</button>
+		<div id="str-place-holder" style="padding:20px"></div>
+	</div>
+</body>
+</html>
